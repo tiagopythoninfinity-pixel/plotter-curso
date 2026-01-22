@@ -11,6 +11,15 @@
     --shadow-color: rgba(0, 0, 0, 0.5);
 }
 
+.container-box {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -259,8 +268,24 @@ footer {
 }
 
 /* Responsividade para Mobile */
-@media (max-width: 768px) {
-    h1 { font-size: 2rem; }
+@media (max-width: 800px) {
+    .container-box {
+        width: 100dvw;
+        overflow: hidden;
+    }
+    p {
+        font-size: 1rem;
+        width: 350px;
+    }
+
+    .carousel-button.next, .carousel-button.prev {
+        display: none;
+    }
+    .observation {
+        font-size: 1rem;
+        width: 350px;
+    }
+    h1 { font-size: 1.2rem; max-width: 300px; }
     .number { width: 40px; height: 40px; font-size: 1.5rem; }
     .main-header { 
         flex-direction: column;
