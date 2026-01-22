@@ -52,6 +52,7 @@ body {
     right: 50%;
     transform: translateX(-50%);
     left: 50%;
+    flex-direction: row;
     width: 90%;
     margin: 0 auto;
     z-index: 1000;
@@ -275,7 +276,7 @@ footer {
     }
     p {
         font-size: 1rem;
-        width: 350px;
+        width: 250px;
     }
 
     .carousel-button.next, .carousel-button.prev {
@@ -288,9 +289,19 @@ footer {
     h1 { font-size: 1.2rem; max-width: 300px; }
     .number { width: 40px; height: 40px; font-size: 1.5rem; }
     .main-header { 
-        flex-direction: column;
         height: auto;
+        gap: 1rem;
         padding: 10px 20px;
+        flex-direction: column;
+    }
+
+    .main-header nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-header a {
+        font-size: 1rem;
     }
     .main-header .logo { margin-bottom: 10px; }
     nav {
@@ -312,6 +323,10 @@ footer {
         font-size: 1rem;
     }
     .slide-wrapper img {
-        height: 300px; /* Altura menor para imagens no mobile */
+        height: 250px; /* Altura menor para imagens no mobile */
+    }
+    .slide-wrapper {
+        width: 100%;
+        overflow: hidden;
     }
 }
